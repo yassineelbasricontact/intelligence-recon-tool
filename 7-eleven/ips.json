@@ -1,0 +1,52 @@
+[
+    {
+        "ip": "104.54.109.92",
+        "tags": [],
+        "general_information": {},
+        "web_technologies": [],
+        "open_ports": [
+            10001
+        ],
+        "open_ports_scan": [
+            {
+                "banner": "OLUME   ULLAGE   HEIGHT    WATER     TEMP\n  1  REGULAR               7295      7157    12487    47.15     0.00    87.44\n  2  PREMIUM               4085      3316     6186    49.45     0.00    87.26\n  3  DIESEL                4068      3555     7836    45.03     0.00    88.00\n\n\u0003\u0001\nI20100\nJUL 27, 2026 10:51 PM\n\n7 ELEVEN            \n4670 SEMINOLE PW RD \nWESTLAKE FL 33470   \nV08273243508001     \n\nIN-TANK INVENTORY       \n\nTANK PRODUCT             VOLUME TC VOLUME   ULLAGE   HEIGHT    WATER     TEMP\n  1  REGULAR               7185      7049    12597    46.65     0.00    87.39\n  2  PREMIUM               4065      3301     6206    49.27     0.00    87.23\n  3  DIESEL                3878      3386     8026    43.57     0.00    88.14\n\n\u0003",
+                "header": "10001 / TCP -1830359080 | 2026-07-28T02:53:41"
+            }
+        ],
+        "vulnerabilities": [],
+        "general_info": {
+            "ASN": "AS7018",
+            "City": "West Palm Beach",
+            "Country": "United States",
+            "Domains": "sbcglobal.net",
+            "Hostnames": "104-54-109-92.lightspeed.wepbfl.sbcglobal.net",
+            "ISP": "AT&T Enterprises, LLC",
+            "Organization": "AT&T Enterprises, LLC"
+        }
+    },
+    {
+        "ip": "96.87.163.214",
+        "tags": [
+            "ics"
+        ],
+        "general_information": {},
+        "web_technologies": [],
+        "open_ports": [
+            10001
+        ],
+        "open_ports_scan": [
+            {
+                "banner": "\u0001\nI20100\n    07-29-26 11:14 AM\n\n157505 7-ELEVEN     \n15201 S.DIXIE HWY.  \nMIAMI,FL 33157      \nSTORE 24558         \n\nIN-TANK INVENTORY       \n\nTANK PRODUCT             VOLUME TC VOLUME   ULLAGE   HEIGHT    WATER     TEMP\n  5  REGULAR               7986      7842     1698    68.12     0.00    86.07\n  6  PREMIUM               3228      3170     6456    32.76     0.00    86.07\n\n\u0003",
+                "header": "10001 / TCP -554202162 | 2026-07-29T16:15:37"
+            }
+        ],
+        "vulnerabilities": [],
+        "general_info": {
+            "ASN": "AS7922",
+            "City": "Fort Lauderdale",
+            "Country": "United States",
+            "ISP": "Comcast Cable Communications, LLC",
+            "Organization": "Comcast Cable Communications, LLC"
+        }
+    }
+]

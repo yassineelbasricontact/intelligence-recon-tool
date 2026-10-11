@@ -1,0 +1,87 @@
+[
+    {
+        "ip": "175.107.14.198",
+        "tags": [
+            "database"
+        ],
+        "general_information": {},
+        "web_technologies": [],
+        "open_ports": [
+            445,
+            1883,
+            3306,
+            5672,
+            6379,
+            8000,
+            8443,
+            8686,
+            9011,
+            9100,
+            9200,
+            18443,
+            19443,
+            61613,
+            61616
+        ],
+        "open_ports_scan": [
+            {
+                "banner": "SMB Status:\n  Authentication: disabled\n  SMB Version: 2\n  Capabilities: raw-mode\n\nShares\nName                 Type       Comments\n------------------------------------------------------------------------\nprint$               Disk       Printer Drivers\ncentral police office Disk\nDigital Library      Disk\nNHMP Drive for IGP   Disk\nother                Disk\nIPC$                 IPC        IPC Service (Samba 4.9.1)",
+                "header": "445 / TCP 967523834 | 2026-08-05T02:56:22"
+            },
+            {
+                "banner": "p\u0002pl",
+                "header": "1883 / TCP 295045955 | 2026-08-03T10:39:33"
+            },
+            {
+                "banner": "MariaDB:\n  Protocol Version: 10\n  Version: 10.11.16-MariaDB-log\n  Capabilities: 63486\n  Server Language: 33\n  Server Status: 2\n  Extended Server Capabilities: 33279\n  Authentication Plugin: mysql_native_password",
+                "header": "3306 / TCP 764016663 | 2026-08-06T03:06:13"
+            },
+            {
+                "banner": "\\x15\\x03\\x03\\x00\\x02\\x02\\n",
+                "header": "5672 / TCP 419477611 | 2026-08-05T20:07:26"
+            },
+            {
+                "banner": "-NOAUTH Authentication required.",
+                "header": "6379 / TCP -1927723706 | 2026-08-06T06:58:43"
+            },
+            {
+                "banner": "HTTP/1.1 200 OK\nContent-Type:text/html;charset=utf-8\nContent-Length:2134",
+                "header": "8000 / TCP 1486764609 | 2026-08-05T10:26:40"
+            },
+            {
+                "banner": "HTTP/1.1 404 \nSet-Cookie: JSESSIONID=E0C687CAF5BC82A1BEC845BD7519FE6D; Path=/; Secure; HttpOnly\nContent-Type: text/html;charset=UTF-8\nContent-Length: 343\nDate: Thu, 06 Aug 2026 16:06:12 GMT",
+                "header": "8443 / TCP -1574695938 | 2026-08-05T16:06:05"
+            },
+            {
+                "banner": "HTTP/1.1 200 OK\nServer: openresty\nDate: Thu, 06 Aug 2026 08:27:59 GMT\nContent-Type: text/html\nContent-Length: 23662\nLast-Modified: Thu, 16 Jul 2026 02:13:04 GMT\nConnection: keep-alive\nVary: Accept-Encoding\nETag: \"6a583e30-5c6e\"\nCross-Origin-Embedder-Policy: require-corp\nCross-Origin-Opener-Policy: same-origin\nStrict-Transport-Security: max-age=31536000;includeSubDomains\nAccept-Ranges: bytes",
+                "header": "9011 / TCP 758241515 | 2026-08-05T08:27:51"
+            },
+            {
+                "banner": "HTTP/1.1 401 Unrecognized registration service\nContent-Length: 0\nCFL_Asynch:operation=invalidOperation&session=0&sequence=0&unit=DMS&id=400101",
+                "header": "9200 / TCP 0 | 2026-08-05T20:20:01"
+            },
+            {
+                "banner": "HTTP/1.1 404 \nContent-Type: text/html;charset=utf-8\nContent-Language: en\nContent-Length: 431\nDate: Fri, 07 Aug 2026 09:28:56 GMT",
+                "header": "19443 / TCP 1410193794 | 2026-08-06T09:28:51"
+            },
+            {
+                "banner": "\\x15\\x03\\x03\\x00\\x02\\x02\\n",
+                "header": "61613 / TCP 419477611 | 2026-08-06T07:29:08"
+            },
+            {
+                "banner": "\u0015\u0003\u0003\u0002\u0002",
+                "header": "61616 / TCP -2007783223 | 2026-08-06T13:48:08"
+            }
+        ],
+        "vulnerabilities": [],
+        "general_info": {
+            "ASN": "AS23888",
+            "City": "Rawalpindi",
+            "Country": "Pakistan",
+            "Domains": "nhmp.gov.pk",
+            "Hostnames": "helpline130.nhmp.gov.pk",
+            "ISP": "National Telecommunication Corporation HQ,",
+            "Organization": "National Telecommunication Corporation"
+        }
+    }
+]

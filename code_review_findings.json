@@ -1,0 +1,122 @@
+[
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 119,
+    "summary": "Redundant condition: 'noi >= 100 or noi >= MIN_ASN_COUNT' where MIN_ASN_COUNT=100",
+    "failure_scenario": "MIN_ASN_COUNT is defined as 100 on line 27, making the condition 'noi >= 100 or noi >= 100'. This is redundant and could mask if MIN_ASN_COUNT changes."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 128,
+    "summary": "Exception handler continues loop after driver.quit(), but driver variable may be None",
+    "failure_scenario": "If exception occurs before driver assignment (line 94), driver will be None. Line 130-131 calls driver.quit() without checking if driver exists, causing AttributeError."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 162,
+    "summary": "Exception handler continues after Cloudflare detection but driver may be None",
+    "failure_scenario": "If Cloudflare exception raised on line 161, driver exists. But if exception occurs before driver assignment (line 153), driver will be None. Line 181 calls driver.quit() without checking."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 173,
+    "summary": "Exception swallowed silently in organization check loop",
+    "failure_scenario": "Exception on lines 167-170 (org or noi_raw extraction) is caught and ignored with 'continue'. This silently skips rows that may contain valid data due to selector fragility."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 184,
+    "summary": "Wrong variable name in calculation of total_orgs",
+    "failure_scenario": "'for city in big_orgs.values()' should be 'for city_dict in big_orgs.values()' then 'for v in city_dict.values()'. Current code tries to iterate over city (string) values instead of dict values."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 190,
+    "summary": "Driver variable may be undefined in finally block",
+    "failure_scenario": "If exception occurs before driver assignment (line 195), driver will be None. Line 210 calls driver.quit() without checking if driver exists."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 215,
+    "summary": "Driver variable may be undefined in finally block",
+    "failure_scenario": "If exception occurs before driver assignment (line 220), driver will be None. Line 235 calls driver.quit() without checking if driver exists."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 240,
+    "summary": "Driver variable may be undefined in finally block",
+    "failure_scenario": "If exception occurs before driver assignment (line 245), driver will be None. Line 260 calls driver.quit() without checking if driver exists."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 268,
+    "summary": "Driver variable may be undefined in finally block",
+    "failure_scenario": "If exception occurs before driver assignment (line 278), driver will be None. Line 354 calls driver.quit() without checking if driver exists."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 393,
+    "summary": "Potential off-by-one: pbar.update(1) after result processing could skip error cases",
+    "failure_scenario": "If future.result() raises exception, pbar.update(1) still executes (line 500). But line 499 catches Exception and prints error, then continues to pbar.update(1). Progress bar advances even on failure."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 426,
+    "summary": "number_of_ips may be empty list if fetch_cities fails",
+    "failure_scenario": "If fetch_cities returns empty list (line 414 returns), number_of_ips will be empty. Line 426 tries to iterate over it with for idx, n in enumerate(number_of_ips), causing split to remain len(number_of_ips) which is 0, making big_cities and normal_cities empty."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 430,
+    "summary": "split variable initialization uses len(number_of_ips) which may be 0",
+    "failure_scenario": "If number_of_ips is empty (len=0), split=0. Line 436: big_cities = city_list[:0] (empty), normal_cities = city_list[0:] (all cities). This inverts intended logic: all cities become 'normal', none 'big'."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 503,
+    "summary": "Redundant warning conditions with overlapping thresholds",
+    "failure_scenario": "Lines 503-506 check <30% then <40% with separate print statements. If collected IPs <30% of total_reported, both warnings trigger. Should be single check with appropriate threshold."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 111,
+    "summary": "Fragile selector chain with multiple fallbacks that may not match actual page structure",
+    "failure_scenario": "Selector '.facet-name, .name, h4, .facet-label' attempts multiple classes/elements. If page structure changes, all may fail. Exception caught on line 112, falls back to By.CLASS_NAME 'name' which may also fail."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 115,
+    "summary": "Fragile selector chain for value extraction with multiple fallbacks",
+    "failure_scenario": "Selector '.facet-value, .value, span.count, .facet-count' may not match actual page. Exception caught on line 116, falls back to By.CLASS_NAME 'value' which may also fail."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 206,
+    "summary": "JavaScript selector assumes specific DOM structure that may not exist",
+    "failure_scenario": "Selector '.card.card-padding.u-full-width.facets-card .name a strong' may not match if Shodan changes page layout. Returns empty list silently."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 331,
+    "summary": "Regex pattern for CVE extraction uses case-insensitive flag but then calls .toUpperCase()",
+    "failure_scenario": "Line 336 regex uses /i flag (case-insensitive), line 338 calls .toUpperCase(). Redundant but not harmful."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 349,
+    "summary": "scraped variable may be None if JavaScript execution fails",
+    "failure_scenario": "If driver.execute_script returns None (JavaScript error or timeout), line 350 host_data.update(None) will raise TypeError."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 122,
+    "summary": "Threshold comparison uses CITY_IP_DEEP_THRESHOLD (100) but logic inverted",
+    "failure_scenario": "Line 122: 'if noi < CITY_IP_DEEP_THRESHOLD:' adds to small_asn. But small_asn intended for ASNs with <100 IPs? Actually small_asn dictionary defined for cities, not threshold-based."
+  },
+  {
+    "file": "/home/viper/Projects/shodan/shodan.py",
+    "line": 467,
+    "summary": "Fallback logic may create duplicate work for cities without ASNs",
+    "failure_scenario": "If city in big_cities has no ASNs (big_asn.get(city, []) empty), line 465 adds city-fallback task. But big_cities already processed in loop starting line 457. City may get duplicate tasks if also in other lists."
+  }
+]
