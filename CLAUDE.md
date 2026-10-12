@@ -41,3 +41,15 @@ Rate limiting: 15-second sleep BETWEEN EACH CITY.
 - Confirm ≥40% scrape rate (actual IPs vs. reported count)
 - After any change: re-run, check results, never stop without verification
 - **DO NOT add pagination, DO NOT stop at one level, DO NOT change threshold from 100**
+
+## 📚 Reference Documentation
+For detailed operational procedures and autonomous operation guidelines, see `instructions.md`. This file contains:
+- Step-by-step verification procedures
+- GitHub synchronization instructions  
+- Threshold validation checkpoints
+- Results management guidelines
+- Dependency management procedures
+- Troubleshooting common issues
+- Maintenance schedules
+
+To operate autonomously, follow the procedures outlined in `instructions.md` and always adhere to the verification requirements in this CLAUDE.md file.
