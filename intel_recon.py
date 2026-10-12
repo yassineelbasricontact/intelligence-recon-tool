@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Shodan Facet Scraper & Recon - Modern Edition
+Intelligence Reconnaissance Tool - Modern Edition
 Hierarchical IP collection with Mullvad VPN + Auto Recon Mode
 """
 import argparse
@@ -570,13 +570,13 @@ def run_recon_mode(ip_file: str, output_file: str, threads: int = 4):
 # ============================================================================
 def main():
     parser = argparse.ArgumentParser(
-        description="Shodan Facet Scraper & Recon - Modern Edition",
+        description="Intelligence Reconnaissance Tool - Modern Edition",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python3 shodan.py --query="ics" --thread=4
-  python3 shodan.py --query="ics" --thread=4 --vpn mullvad-us
-  python3 shodan.py --query="ics" --thread=4 --auto-recon
+  python3 intel_recon.py --query="ics" --thread=4
+  python3 intel_recon.py --query="ics" --thread=4 --vpn mullvad-us
+  python3 intel_recon.py --query="ics" --thread=4 --auto-recon
         """
     )
 

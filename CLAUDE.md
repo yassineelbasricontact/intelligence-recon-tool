@@ -28,7 +28,7 @@ Rate limiting: 15-second sleep BETWEEN EACH CITY.
 
 ## Auto-Verify Without User Interaction (mandatory)
 - Before and after any change: run verification alone — do not wait for user.
-- Run test query: `python3 shodan.py --query="ics" --thread=4`
+- Run test query: `python3 intel_recon.py --query="ics" --thread=4`
 - Check: small cities grabbed directly (no ASN output), big cities drilled, threshold 100 enforced.
 - If test fails: fix code, re-run, verify again — never ask user to confirm.
 - Always check output shows: "[+] Big cities (>100 IPs, drill to ASN): N" and "[+] Small cities (≤100 IPs, scrape directly): M"
@@ -36,7 +36,7 @@ Rate limiting: 15-second sleep BETWEEN EACH CITY.
 
 ## Pre-task rule
 - Before every task: read this file, understand threshold is 100 IPs at EACH level
-- Run program with actual Shodan query: `python3 shodan.py --query="ics" --thread=4`
+- Run program with actual Shodan query: `python3 intel_recon.py --query="ics" --thread=4`
 - Verify results: small cities grabbed directly, big cities drilled to ASNs/orgs
 - Confirm ≥40% scrape rate (actual IPs vs. reported count)
 - After any change: re-run, check results, never stop without verification
